@@ -1,0 +1,61 @@
+/* reset.scss */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: $font-main;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-main;
+  color: black;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  /* a태그가 속한 상위 부모의 값을 상속받음 */
+}
+
+button,
+input,
+select,
+textarea {
+  border: 0;
+  background-color: transparent; /* 투명 */
+
+  &:focus {
+    outline: none;
+    box-sizing: none;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+address {
+  font-style: normal;
+}
