@@ -1,0 +1,68 @@
+%btn-base {
+  @include inline-flexbox;
+  border-radius: 8px;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.btn-outline-white {
+  @extend %btn-base;
+  padding: 8px 24px;
+  color: $white;
+  background-color: transparent;
+  border: 2px solid $white;
+  transition: all 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    color: $green;
+    border: 2px solid $green;
+  }
+}
+
+.btn-green {
+  @extend %btn-base;
+  padding: 8px 24px;
+  color: $white;
+  background-color: $green;
+  transition: all 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    color: $green;
+    background-color: $white;
+  }
+}
+
+.btn-footer-desktop {
+  @extend %btn-base;
+  width: 140px;
+  height: 38px;
+
+  &:not(:disabled):hover {
+    color: $green;
+    border: 2px solid $green;
+  }
+}
+
+.btn-footer-mobile {
+  @extend %btn-base;
+  padding: 8px 12px;
+
+  &:not(:disabled):hover {
+    color: $green;
+    border: 2px solid $green;
+  }
+}
+
+.btn-footer-mobile-login {
+  @extend %btn-base;
+  width: 162px;
+  height: 38px;
+
+  &:not(:disabled):hover {
+    color: $green;
+    border: 2px solid $green;
+  }
+}
