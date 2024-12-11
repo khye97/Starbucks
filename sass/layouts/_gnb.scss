@@ -16,5 +16,11 @@
     @include flexbox(between);
     width: 100%;
     height: 70px;
+
+    .gnb-right {
+      button:first-child {
+        margin-right: 8px;
+      }
+    }
   }
 }
