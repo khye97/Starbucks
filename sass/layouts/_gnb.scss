@@ -18,6 +18,15 @@
       width: 100%;
       height: 70px;
 
+      i {
+        font-size: 32px;
+        color: $white;
+
+        &:active {
+          color: $green;
+        }
+      }
+
       .gnb-right {
         button:first-child {
           margin-right: 8px;
