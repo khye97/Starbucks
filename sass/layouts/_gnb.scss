@@ -52,7 +52,7 @@
           .gnb-top {
             @include flexbox(end, center);
             height: 50px;
-            border: 1px solid red;
+            // border: 1px solid red;
 
             .gnb-list {
               @include flexbox;
@@ -73,6 +73,11 @@
                 &:last-child::after {
                   content: "";
                   margin-left: 0;
+                }
+
+                &:active,
+                &:hover {
+                  text-decoration: underline;
                 }
               }
             }
@@ -108,11 +113,43 @@
             }
           }
           .gnb-bottom {
+            @include flexbox(start, center);
             height: 70px;
-            border: 1px solid yellow;
+            // border: 1px solid yellow;
+            padding-left: 75px + 40px;
 
             .gnb-list {
               @include flexbox;
+
+              .gnb-item {
+                margin-right: 25px;
+                text-align: center;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+
+                &:active,
+                &:hover {
+                  color: $green;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-desktop {
+      .gnb-wrapper {
+        .gnb-menu-wrapper {
+          .gnb-bottom {
+            .gnb-list {
+              .gnb-item {
+                margin-right: 40px;
+              }
             }
           }
         }
