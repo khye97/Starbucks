@@ -124,6 +124,7 @@
               .gnb-item {
                 margin-right: 25px;
                 text-align: center;
+                transition: all 200ms ease-in-out;
 
                 &:last-child {
                   margin-right: 0;
