@@ -1,12 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Denk+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="gnb">
+      <div class="gnb-mobile sm-only">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <a class="logo" href="/">
+                <img src="./assets/image/logo.png" alt="메인 로고" />
+              </a>
+              <div class="gnb-wrapper">
+                <div class="gnb-left">
+                  <button type="button">
+                    <i class="icon-menu" aria-label="메뉴 열기"></i>
+                  </button>
+                </div>
+                <div class="gnb-right">
+                  <button type="button">
+                    <i class="icon-user" aria-label="마이메뉴"></i>
+                  </button>
+                  <button type="button">
+                    <i class="icon-location" aria-label="매장 찾기"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--gnb-mobile-->
+
+      <div class="gnb-desktop sm-hidden">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="gnb-wrapper">
+                <div class="logo">
+                  <img src="./assets/image/logo.png" alt="로고" />
+                </div>
+                <div class="gnb-menu-wrapper">
+                  <div class="gnb-top">
+                    <ol class="gnb-list">
+                      <li class="gnb-item">
+                        <a href="/">Sign In</a>
+                      </li>
+                      <li class="gnb-item">
+                        <a href="/">My Starbucks</a>
+                      </li>
+                      <li class="gnb-item">
+                        <a href=""> Find a Store </a>
+                      </li>
+                    </ol>
+
+                    <button type="button">
+                      <i class="icon-search" aria-label="검색창 열기"></i>
+                    </button>
+                    <div class="input-wrapper">
+                      <input type="text" />
+                      <button class="btn-search" type="button">Search</button>
+                    </div>
+                  </div>
+                  <div class="gnb-bottom">
+                    <ol class="gnb-list">
+                      <li class="gnb-item">
+                        <a href="/">COFFEE</a>
+                      </li>
+                      <li class="gnb-item">
+                        <a href="/">MENU</a>
+                      </li>
+                      <li class="gnb-item">
+                        <a href="/">STORE</a>
+                      </li>
+                      <li class="gnb-item">
+                        <a href="/">RESPONSIBILITY</a>
+                      </li>
+                      <li class="gnb-item">
+                        <a href="/">STARBUCKS REWARDS</a>
+                      </li>
+                      <li class="gnb-item">
+                        <a href="/">WHAT'S NEW</a>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--gnb-desktop-->
+    </section>
+
+    <section class="main-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="title-wrapper">
+              <h2>MERRIER</h2>
+              <h2>TOGETHER</h2>
+            </div>
+            <div class="product-wrapper">
+              <div class="image-box product01">
+                <img
+                  class="product-desktop"
+                  src="./image/main-banner-product01.png"
+                  alt=""
+                />
+                <img
+                  class="product-mobile"
+                  src="./image/mobile-main-banner-product01.png"
+                  alt=""
+                />
+              </div>
+              <div class="image-box product02">
+                <img
+                  class="product-desktop"
+                  src="./image/main-banner-product02.png"
+                  alt=""
+                />
+                <img
+                  class="product-mobile"
+                  src="./image/mobile-main-banner-product02.png"
+                  alt=""
+                />
+              </div>
+              <div class="image-box product03">
+                <img
+                  class="product-desktop"
+                  src="./image/main-banner-product03.png"
+                  alt=""
+                />
+                <img
+                  class="product-mobile"
+                  src="./image/mobile-main-banner-product03.png"
+                  alt=""
+                />
+              </div>
+              <div class="image-box product04">
+                <img
+                  class="product-desktop"
+                  src="./image/main-banner-product04.png"
+                  alt=""
+                />
+                <img
+                  class="product-mobile"
+                  src="./image/mobile-main-banner-product04.png"
+                  alt=""
+                />
+              </div>
+              <div class="image-box product05">
+                <img
+                  class="product-desktop"
+                  src="./image/main-banner-product05.png"
+                  alt=""
+                />
+                <img
+                  class="product-mobile"
+                  src="./image/mobile-main-banner-product05.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <button class="btn-outline-white">자세히보기</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--main-banner-->
+
+    <aside class="sidebar"></aside>
+
+    <div class="overlay is-active" aria-hidden="true"></div>
+  </body>
 </html>
