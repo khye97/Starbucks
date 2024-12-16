@@ -1,0 +1,27 @@
+.search-wrapper {
+  @include flexbox;
+  margin-top: 64px;
+  margin-bottom: 20px;
+
+  input {
+    width: 154px;
+    height: 38px;
+    background-color: $white;
+    border-radius: 4px;
+    margin-right: 4px;
+    padding-left: 8px;
+  }
+
+  button {
+    height: 38px;
+    padding: 0 16px;
+    background-color: $green;
+    border-radius: 4px;
+    border: 2px solid transparent;
+
+    &:active {
+      border: 2px solid $white;
+      color: $white;
+    }
+  }
+}

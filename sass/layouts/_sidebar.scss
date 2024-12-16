@@ -1,0 +1,129 @@
+%sidebar-content-list {
+  width: 100%;
+  // border-bottom: 1px solid $secondary;
+  // padding: 16px 0;
+  color: $green;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: $primary;
+  z-index: 2;
+  color: $white;
+  border-right: 1px solid $secondary;
+  overflow-y: scroll;
+  scroll-behavior: none;
+  transform: translate3d(-300px, 0, 0);
+  transition: transform 300ms ease-in-out;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .list-height {
+    @include flexbox(start);
+    height: 55px;
+    border-top: 1px solid $secondary;
+  }
+
+  .btn-close {
+    font-size: 24px;
+    color: $white;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  .sidebar-menu {
+    padding: 0 20px;
+
+    .drawer-menu {
+      border-bottom: 1px solid $secondary;
+      // padding: 16px 0;
+
+      &.is-active {
+        .contents-wrapper {
+          display: block;
+        }
+
+        .btn-head i {
+          transform: rotate(-180deg);
+        }
+      }
+
+      &:first-child {
+        // padding: 16px 0;
+        @include flexbox(start);
+        height: 55px;
+        border-top: 1px solid $secondary;
+      }
+
+      .btn-head {
+        @include flexbox(between, center);
+        height: 55px;
+        width: 100%;
+        color: $white;
+        // padding: 16px 0;
+
+        i {
+          font-size: 24px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+
+      .contents-wrapper {
+        // display: none;
+        height: 0;
+        overflow: hidden;
+        transition: all 200ms ease-in-out;
+
+        .contents-list {
+          @extend %sidebar-content-list;
+          // height: 55px;
+
+          button {
+            @extend %sidebar-content-list;
+            @include flexbox(between, center);
+            height: 55px;
+            border-top: 1px solid $secondary;
+
+            i {
+              font-size: 24px;
+              transition: all 200ms ease-in-out;
+            }
+          }
+
+          .detail-list {
+            // display: none;
+            height: 0;
+            overflow: hidden;
+
+            &.is-active {
+              // display: block;
+              border-top: 1px solid $secondary;
+              padding: 16px 0;
+            }
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            .detail-item {
+              @include flexbox(start);
+              color: $secondary;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
