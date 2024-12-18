@@ -1,0 +1,82 @@
+.main-banner {
+  // display: none;
+  position: relative;
+  // height: 416.72vw;
+  height: calc(100vw * (2667 / 640));
+  background-image: url("../../assets/image/mobile-main-banner-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 70px;
+  overflow-x: hidden;
+
+  .title-wrapper {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    h2 {
+      font-family: $font-title;
+      // font-size: 48px;
+      font-size: 15vw;
+      color: $white;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  .product-wrapper {
+    // height: 416.72vw;
+
+    .image-box {
+      position: absolute;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .product01 {
+      width: 86%;
+      top: 18%;
+      left: 15%;
+    }
+
+    .product02 {
+      width: 66%;
+      top: 34%;
+      left: 17%;
+    }
+
+    .product03 {
+      width: 80%;
+      top: 50%;
+      right: 5%;
+    }
+
+    .product04 {
+      width: 68%;
+      top: 62%;
+      left: 17%;
+    }
+
+    .product05 {
+      width: 85%;
+      top: 76%;
+      right: 0;
+    }
+
+    .product-desktop {
+      display: none;
+    }
+  }
+
+  button {
+    @include position-center-x;
+    bottom: 5%;
+  }
+
+  @include responsive(D) {
+    margin-top: 120px;
+  }
+}
