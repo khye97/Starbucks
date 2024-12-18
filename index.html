@@ -17,95 +17,7 @@
     />
   </head>
   <body>
-    <section class="gnb">
-      <div class="gnb-mobile sm-only">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <a class="logo" href="/">
-                <img src="./assets/image/logo.png" alt="메인 로고" />
-              </a>
-              <div class="gnb-wrapper">
-                <div class="gnb-left">
-                  <button class="menu" type="button">
-                    <i class="icon-menu" aria-label="메뉴 열기"></i>
-                  </button>
-                </div>
-                <div class="gnb-right">
-                  <button type="button">
-                    <i class="icon-user" aria-label="마이메뉴"></i>
-                  </button>
-                  <button type="button">
-                    <i class="icon-location" aria-label="매장 찾기"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--gnb-mobile-->
-
-      <div class="gnb-desktop sm-hidden">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="gnb-wrapper">
-                <div class="logo">
-                  <img src="./assets/image/logo.png" alt="로고" />
-                </div>
-                <div class="gnb-menu-wrapper">
-                  <div class="gnb-top">
-                    <ol class="gnb-list">
-                      <li class="gnb-item">
-                        <a href="/">Sign In</a>
-                      </li>
-                      <li class="gnb-item">
-                        <a href="/">My Starbucks</a>
-                      </li>
-                      <li class="gnb-item">
-                        <a href=""> Find a Store </a>
-                      </li>
-                    </ol>
-
-                    <button type="button">
-                      <i class="icon-search" aria-label="검색창 열기"></i>
-                    </button>
-                    <div class="input-wrapper">
-                      <input type="text" />
-                      <button class="btn-search" type="button">Search</button>
-                    </div>
-                  </div>
-                  <div class="gnb-bottom">
-                    <ol class="gnb-list">
-                      <li class="gnb-item">
-                        <a href="/">COFFEE</a>
-                      </li>
-                      <li class="gnb-item">
-                        <a href="/">MENU</a>
-                      </li>
-                      <li class="gnb-item">
-                        <a href="/">STORE</a>
-                      </li>
-                      <li class="gnb-item">
-                        <a href="/">RESPONSIBILITY</a>
-                      </li>
-                      <li class="gnb-item">
-                        <a href="/">STARBUCKS REWARDS</a>
-                      </li>
-                      <li class="gnb-item">
-                        <a href="/">WHAT'S NEW</a>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--gnb-desktop-->
-    </section>
+    <section id="gnb" class="gnb"></section>
 
     <section class="main-banner">
       <div class="container">
@@ -114,65 +26,67 @@
             <div class="title-wrapper">
               <h2>MERRIER</h2>
               <h2>TOGETHER</h2>
+              <!-- <img src="./assets/image/main-banner-title.png" alt="" />
+              <img src="./assets/image/mobile-main-banner-title.png" alt="" /> -->
             </div>
             <div class="product-wrapper">
               <div class="image-box product01">
                 <img
                   class="product-desktop"
-                  src="./image/main-banner-product01.png"
+                  src="./assets/image/main-banner-product01.png"
                   alt=""
                 />
                 <img
                   class="product-mobile"
-                  src="./image/mobile-main-banner-product01.png"
+                  src="./assets/image/mobile-main-banner-product01.png"
                   alt=""
                 />
               </div>
               <div class="image-box product02">
                 <img
                   class="product-desktop"
-                  src="./image/main-banner-product02.png"
+                  src="./assets/image/main-banner-product02.png"
                   alt=""
                 />
                 <img
                   class="product-mobile"
-                  src="./image/mobile-main-banner-product02.png"
+                  src="./assets/image/mobile-main-banner-product02.png"
                   alt=""
                 />
               </div>
               <div class="image-box product03">
                 <img
                   class="product-desktop"
-                  src="./image/main-banner-product03.png"
+                  src="./assets/image/main-banner-product03.png"
                   alt=""
                 />
                 <img
                   class="product-mobile"
-                  src="./image/mobile-main-banner-product03.png"
+                  src="./assets/image/mobile-main-banner-product03.png"
                   alt=""
                 />
               </div>
               <div class="image-box product04">
                 <img
                   class="product-desktop"
-                  src="./image/main-banner-product04.png"
+                  src="./assets/image/main-banner-product04.png"
                   alt=""
                 />
                 <img
                   class="product-mobile"
-                  src="./image/mobile-main-banner-product04.png"
+                  src="./assets/image/mobile-main-banner-product04.png"
                   alt=""
                 />
               </div>
               <div class="image-box product05">
                 <img
                   class="product-desktop"
-                  src="./image/main-banner-product05.png"
+                  src="./assets/image/main-banner-product05.png"
                   alt=""
                 />
                 <img
                   class="product-mobile"
-                  src="./image/mobile-main-banner-product05.png"
+                  src="./assets/image/mobile-main-banner-product05.png"
                   alt=""
                 />
               </div>
@@ -184,418 +98,37 @@
     </section>
     <!--main-banner-->
 
-    <aside class="sidebar">
-      <button class="btn-close" type="button">
-        <i class="icon-close"></i>
-      </button>
-      <div class="search-wrapper">
-        <input type="text" />
-        <button type="button">Search</button>
-      </div>
-      <nav class="sidebar-menu">
-        <div class="drawer-menu my-starbuck">
-          <a href="/">My Starbucks</a>
-        </div>
-
-        <div class="drawer-menu coffee">
-          <button class="btn-head" type="button">
-            COFFEE
-            <i class="icon-chevron"></i>
-          </button>
-
-          <ul class="contents-wrapper">
-            <li class="contents-list">
-              <button type="button">
-                커피
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">스타벅스 원두</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 비아</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 오리가미</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스앳홈 by 캡슐</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">나와 어울리는 커피</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                커피 이야기
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">농장에서 우리의 손으로</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">최상의 아라비카 원두</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 로스트 스펙트럼</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 디카페인</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                스타벅스 리저브
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">ABOUT</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">RESERVE MAGAZINE</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                에스프레소 음료
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">도피오</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">에스프레소 마키아또</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">아메리카노</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">마키아또</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">카푸치노</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">라떼</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">모카</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                최상의 커피를 즐기는 법
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">커피 프레스</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">푸어 오버</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">아이스 푸어 오버</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">커피 메이커</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="drawer-menu menu">
-          <button class="btn-head" type="button">
-            MENU
-            <i class="icon-chevron"></i>
-          </button>
-
-          <ul class="contents-wrapper">
-            <li class="contents-list">
-              <button type="button">
-                음료
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">전체보기</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">콜드 브루</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">브루드 커피</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">에스프레소</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">프라푸치노</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">블렌디드</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 리프레셔</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 피지오</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">티(티바나)</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">기타 제조 음료</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 주스(병음료)</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                푸드
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">전체보기</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">브레드</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">케이크</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">샌드위치 & 샐러드</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">따뜻한 푸드</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">과일 & 요거트</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스낵 & 미니 디저트</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">아이스크림</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                상품
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">전체보기</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">머그</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">글라스</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">플라스틱 텀블러</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스테인리스 텀블러</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">보온병</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">액세서리</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">선물세트</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">커피 용품</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">패키지 티(티바나)</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">시럽</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                카드
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">전체보기</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">실물카드</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 모바일 카드</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                메뉴 이야기
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">스타벅스 티바나</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 콜드 브루</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="drawer-menu store">
-          <button class="btn-head" type="button">
-            STORE
-            <i class="icon-chevron"></i>
-          </button>
-
-          <ul class="contents-wrapper">
-            <li class="contents-list">
-              <button type="button">
-                매장 찾기
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">빠른 검색</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">지역 검색</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list list-height">
-              <a href="/">드라이브 스루 매장</a>
-            </li>
-            <li class="contents-list list-height">
-              <a href="/">스타벅스 리저브 매장</a>
-            </li>
-            <li class="contents-list list-height">
-              <a href="/">커뮤니티 스토어 매장</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="drawer-menu campaign">
-          <button class="btn-head" type="button">
-            RESPONSIBILITY
-            <i class="icon-chevron"></i>
-          </button>
-
-          <ul class="contents-wrapper">
-            <li class="contents-list list-height">
-              <a href="/">사회공헌 캠페인 소개</a>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                지역 사회 참여 활동
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">희망배달 캠페인</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">재능기부 카페 소식</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">커뮤니티 스토어</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">청년 지원 프로그램</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">우리 농산물 사랑 캠페인</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">국가유산 지킴이 활동</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                환경보호 활동
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">친환경 활동</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">일회용 컵 없는 매장</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">커피 원두 재활용</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                윤리 구매
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">윤리적 원두 구매</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">공정무역 인증</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">커피 농가 지원 활동</a>
-                </li>
-              </ul>
-            </li>
-            <li class="contents-list">
-              <button type="button">
-                글로벌 사회 공헌
-                <i class="icon-chevron"></i>
-              </button>
-              <ul class="detail-list">
-                <li class="detail-item">
-                  <a href="/">윤리경영 보고서</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">스타벅스 재단</a>
-                </li>
-                <li class="detail-item">
-                  <a href="/">지구촌 봉사의 달</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </aside>
+    <aside id="sidebar" class="sidebar"></aside>
 
     <div class="overlay" aria-hidden="true"></div>
 
-    <script src="./js/sidebar.js"></script>
-    <script src="./js/sidebar-drawer.js"></script>
+    <script>
+      function load(htmlFile, jsFile, id) {
+        fetch(htmlFile)
+          .then((response) => response.text())
+          .then((data) => {
+            let innerHtml = data;
+            const parent = document.getElementById(id);
+            parent.insertAdjacentHTML("beforeend", innerHtml);
+
+            if (jsFile) {
+              jsFile.forEach((element) => {
+                var script = document.createElement("script");
+                script.src = element;
+                document.body.appendChild(script);
+              });
+            }
+          });
+      }
+
+      window.onload = function () {
+        load(
+          "./html/gnb.html",
+          ["./js/sidebar.js", "./js/sidebar-drawer.js"],
+          "gnb"
+        ); // gnb
+        load("./html/sidebar.html", null, "sidebar"); // sidebar
+      };
+    </script>
   </body>
 </html>
