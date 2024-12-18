@@ -1,0 +1,41 @@
+.dropdown-menu {
+  @include flexbox;
+  position: fixed;
+  // position: absolute;
+  background-color: $primary;
+  width: 100vw;
+  top: 120px;
+  // top: 100%;
+  // width: 100%;
+  left: 0;
+  padding: 30px 0;
+  border-top: 1px solid $secondary;
+  opacity: 0; /* 기본적으로 숨김 */
+  visibility: hidden; /* 메뉴를 보이지 않도록 */
+  transition: all 100ms ease-in-out;
+
+  &-wrapper {
+    @include flexbox(start, start);
+    width: 1140px;
+
+    .dropdown-menu-list {
+      margin-right: 72px;
+
+      .dropdown-menu-item {
+        @include text-style(14);
+        text-align: left;
+        margin-bottom: 6px;
+        color: $secondary;
+
+        &:first-child {
+          margin-bottom: 16px;
+          color: $white;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

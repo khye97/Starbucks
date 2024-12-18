@@ -35,7 +35,7 @@
     }
   }
 
-  @include responsive(T) {
+  @include responsive(D) {
     &-desktop {
       // height: 120px;
       background-color: $primary;
@@ -137,9 +137,10 @@
               @include flexbox;
 
               .gnb-item {
-                margin-right: 25px;
+                margin-right: 40px;
                 text-align: center;
                 transition: all 200ms ease-in-out;
+                padding: 27px 0;
 
                 &:last-child {
                   margin-right: 0;
@@ -148,23 +149,13 @@
                 &:active,
                 &:hover {
                   color: $green;
+                  cursor: pointer;
                 }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 
-  @include responsive(D) {
-    &-desktop {
-      .gnb-wrapper {
-        .gnb-menu-wrapper {
-          .gnb-bottom {
-            .gnb-list {
-              .gnb-item {
-                margin-right: 40px;
+                &:hover .dropdown-menu {
+                  opacity: 1; /* hover 시 나타나게 */
+                  visibility: visible;
+                }
               }
             }
           }
