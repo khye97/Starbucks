@@ -14,6 +14,8 @@
     top: 8%;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0;
+    transition: all 300ms ease-in-out;
 
     h2 {
       font-family: $font-title;
@@ -28,6 +30,10 @@
   .product-wrapper {
     // height: 416.72vw;
 
+    .product-desktop {
+      display: none;
+    }
+
     .image-box {
       position: absolute;
 
@@ -36,10 +42,19 @@
       }
     }
 
+    .product01,
+    .product02,
+    .product03,
+    .product04,
+    .product05 {
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+    }
+
     .product01 {
-      width: 86%;
+      width: 80%;
       top: 18%;
-      left: 15%;
+      left: 17%;
     }
 
     .product02 {
@@ -65,18 +80,129 @@
       top: 76%;
       right: 0;
     }
-
-    .product-desktop {
-      display: none;
-    }
   }
 
   button {
     @include position-center-x;
     bottom: 5%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
   }
 
   @include responsive(D) {
     margin-top: 120px;
+    background-image: url("../../assets/image/main-banner-bg.jpg");
+    // height: 646px;
+    height: calc(100vw * (646 / 2000));
+    background-size: cover;
+
+    .title-wrapper {
+      top: 50%;
+      left: 16%;
+      transform: translateY(-50%);
+
+      h2 {
+        font-size: 4.5vw;
+      }
+    }
+
+    .product-wrapper {
+      .product-mobile {
+        display: none;
+      }
+      .product-desktop {
+        display: block;
+      }
+
+      .image-box {
+        // position: relative;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .product01 {
+        width: 11%;
+        top: 17.5%;
+        left: 36.5%;
+      }
+
+      .product02 {
+        width: 11%;
+        top: 34%;
+        left: 44.5%;
+      }
+
+      .product03 {
+        width: 11%;
+        top: 50%;
+        left: 53%;
+      }
+
+      .product04 {
+        width: 11%;
+        top: 33%;
+        left: 63%;
+      }
+
+      .product05 {
+        width: 10.5%;
+        top: 24%;
+        left: 71%;
+      }
+    }
+
+    button {
+      left: 22%;
+      bottom: 25%;
+      transform: none;
+    }
+  }
+
+  @media screen and (max-height: 809px) {
+    .title-wrapper {
+      transition-delay: 300ms;
+    }
+
+    .product-wrapper {
+      .product01 {
+        transition-delay: 600ms;
+      }
+    }
+  }
+
+  // min-height : 아이폰 X, XS, 11 Pro 기준 (375 * 812)
+  // max-height : 14 Pro Max, 15 Plus, 15 Pro Max 기준 (430 * 932)
+  @media screen and (min-height: 810px) and (max-height: 1000px) {
+    .title-wrapper {
+      transition-delay: 300ms;
+    }
+
+    .product-wrapper {
+      .product01 {
+        transition-delay: 600ms;
+      }
+
+      .product02 {
+        transition-delay: 900ms;
+      }
+    }
+  }
+
+  @media screen and (orientation: Landscape) {
+    .title-wrapper {
+      transition-delay: 0s;
+    }
+
+    .product-wrapper {
+      .product01 {
+        transition-delay: 0s;
+      }
+
+      .product02 {
+        transition-delay: 0s;
+      }
+    }
   }
 }
