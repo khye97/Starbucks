@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Denk+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
   </head>
   <body>
     <section id="gnb" class="gnb"></section>
@@ -136,6 +140,10 @@
         </div>
       </div>
     </section>
+    <!--category-->
+
+    <section id="coffee-bean" class="coffee-bean"></section>
+    <!--section coffee-bean-->
 
     <aside id="sidebar" class="sidebar"></aside>
 
@@ -167,9 +175,15 @@
           "gnb"
         ); // gnb
         load("./html/sidebar.html", null, "sidebar"); // sidebar
+        load(
+          "./html/section-coffee-bean.html",
+          ["./js/carousels.js"],
+          "coffee-bean"
+        ); // sidebar
       };
     </script>
 
     <script src="./js/main-banner.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   </body>
 </html>
