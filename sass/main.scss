@@ -14,6 +14,7 @@
 @import "./mixins/responsive";
 @import "./mixins/positions";
 @import "./mixins/flexbox";
+@import "./mixins/section-header";
 
 @import "./layouts/grids";
 @import "./layouts/gnb";
@@ -21,8 +22,10 @@
 @import "./layouts/sidebar";
 @import "./layouts/overlay";
 @import "./layouts/category";
+@import "./layouts/section-coffee-bean";
 
 @import "./modules/buttons.scss";
 
 @import "./components/sidebar-input";
 @import "./components/gnb-dropdown-menu";
+@import "./components/section-coffee-bean-carousel";

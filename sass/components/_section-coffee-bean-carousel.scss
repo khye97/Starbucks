@@ -1,0 +1,97 @@
+.coffee-bean {
+  .carousel-wrapper {
+    position: relative;
+
+    .carousel-list {
+      display: flex;
+      gap: 0 20px;
+
+      .carousel-item {
+        @include column-flexbox(start);
+        flex: 0 0 auto;
+        height: 550px;
+        background-color: $background;
+        border-radius: 8px;
+        padding: 0px 20px;
+        width: calc(16.66666667% - 20px) !important;
+        // box-shadow: $box-shadow;
+        border-right: 2px solid rgba(0, 0, 0, 0.01);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.01);
+
+        .image-box {
+          width: 300px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .contents-wrapper {
+          width: 270px;
+
+          .title {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 4px;
+          }
+
+          .main-desc,
+          .roasting,
+          .tasting {
+            @include text-style(14);
+          }
+
+          .main-desc {
+            margin-bottom: 24px;
+          }
+
+          .roasting {
+            margin-bottom: 24px;
+
+            .subtitle {
+              margin-bottom: 4px;
+            }
+          }
+
+          .tasting {
+            .subtitle {
+              margin-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .carousel-control-btn {
+      .prev i,
+      .next i {
+        font-size: 40px;
+      }
+
+      .prev {
+        @include position-center-y;
+        left: 0;
+        z-index: 100;
+      }
+
+      .next {
+        @include position-center-y;
+        right: 0;
+        transform: translateY(-50%) rotate(180deg);
+        z-index: 100;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .carousel-wrapper {
+      .carousel-list {
+        .carousel-item {
+          height: auto;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
