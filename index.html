@@ -98,7 +98,7 @@
         </div>
       </div>
     </section>
-    <!--main-banner-->
+    <!-- main-banner -->
 
     <section class="category sm-hidden">
       <div class="contents-wrapper">
@@ -140,50 +140,101 @@
         </div>
       </div>
     </section>
-    <!--category-->
+    <!-- category -->
 
     <section id="coffee-bean" class="coffee-bean"></section>
-    <!--section coffee-bean-->
+    <!-- section coffee-bean -->
+
+    <section id="card" class="card"></section>
+    <!-- section card -->
 
     <aside id="sidebar" class="sidebar"></aside>
 
     <div class="overlay" aria-hidden="true"></div>
 
     <script>
-      function load(htmlFile, jsFile, id) {
-        fetch(htmlFile)
-          .then((response) => response.text())
-          .then((data) => {
-            let innerHtml = data;
-            const parent = document.getElementById(id);
-            parent.insertAdjacentHTML("beforeend", innerHtml);
+      // function load(htmlFile, jsFile, id) {
+      //   fetch(htmlFile)
+      //     .then((response) => response.text())
+      //     .then((data) => {
+      //       let innerHtml = data;
+      //       const parent = document.getElementById(id);
+      //       parent.insertAdjacentHTML("beforeend", innerHtml);
 
-            if (jsFile) {
-              jsFile.forEach((element) => {
-                var script = document.createElement("script");
+      //       // if (jsFile) {
+      //       //   jsFile.forEach((element) => {
+      //       //     var script = document.createElement("script");
+      //       //     script.src = element;
+      //       //     document.body.appendChild(script);
+      //       //   });
+      //       // }
+
+      //     });
+      // }
+
+      async function load(htmlFile, jsFile, id) {
+        try {
+          const response = await fetch(htmlFile); // htmlFile의 fetch 요청을 기다림림
+          const data = await response.text(); // 요청 결과를 text로 파싱
+          const parent = document.getElementById(id);
+          parent.insertAdjacentHTML("beforeend", data);
+
+          if (jsFile) {
+            for (const element of jsFile) {
+              await new Promise((resolve, reject) => {
+                const script = document.createElement("script");
                 script.src = element;
+                script.onload = resolve;
+                script.onerror = reject;
                 document.body.appendChild(script);
               });
             }
-          });
+          }
+        } catch (error) {
+          console.error(`Error loading ${htmlFile}:`, error);
+        }
       }
 
-      window.onload = function () {
-        load(
-          "./html/gnb.html",
-          ["./js/sidebar.js", "./js/sidebar-drawer.js"],
-          "gnb"
-        ); // gnb
-        load("./html/sidebar.html", null, "sidebar"); // sidebar
-        load(
-          "./html/section-coffee-bean.html",
-          ["./js/carousels.js"],
-          "coffee-bean"
-        ); // sidebar
+      window.onload = async function () {
+        // load(
+        //   "./html/gnb.html",
+        //   ["./js/sidebar.js", "./js/sidebar-drawer.js"],
+        //   "gnb"
+        // ); // gnb
+        // load("./html/sidebar.html", null, "sidebar"); // sidebar
+        // load(
+        //   "./html/section-coffee-bean.html",
+        //   ["./js/carousels.js"],
+        //   "coffee-bean"
+        // ); // section coffee-bean
+        // load("./html/section-card.html", ["./js/carousel-card.js"], "card"); // section card
+        try {
+          await load(
+            "./html/gnb.html",
+            ["./js/sidebar.js", "./js/sidebar-drawer.js"],
+            "gnb"
+          ); // gnb
+          await load("./html/sidebar.html", null, "sidebar"); // sidebar
+          await load(
+            "./html/section-coffee-bean.html",
+            ["./js/carousel-coffee-bean.js"],
+            "coffee-bean"
+          ); // section coffee-bean
+          await load(
+            "./html/section-card.html",
+            ["./js/carousel-card.js"],
+            "card"
+          ); // section card
+
+          // 모든 외부 HTML 로드가 완료된 후 IntersectionObserver 초기화
+          initializeIntersectionObserver();
+        } catch (error) {
+          console.error("외부 HTML 로드 중 오류 발생:", error);
+        }
       };
     </script>
-
     <script src="./js/main-banner.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   </body>
 </html>
