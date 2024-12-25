@@ -5,6 +5,7 @@
 @import "./constants/breakpoints";
 @import "./constants/box-shadow";
 @import "./constants/grids";
+@import "./constants/section-padding";
 
 @import "./base/normalize";
 @import "./base/reset";
@@ -23,9 +24,11 @@
 @import "./layouts/overlay";
 @import "./layouts/category";
 @import "./layouts/section-coffee-bean";
+@import "./layouts/section-card";
 
 @import "./modules/buttons.scss";
 
 @import "./components/sidebar-input";
 @import "./components/gnb-dropdown-menu";
 @import "./components/section-coffee-bean-carousel";
+@import "./components/section-card-carousel";

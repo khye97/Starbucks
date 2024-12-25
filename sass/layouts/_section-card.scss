@@ -1,0 +1,38 @@
+.card {
+  background-color: $primary;
+  padding: $section-padding;
+
+  .section-header {
+    color: $white;
+    text-align: center;
+    margin-bottom: 16px;
+
+    h2 {
+      @include section-header-mobile;
+      margin-bottom: 8px;
+    }
+
+    p {
+      @include text-style(14);
+    }
+  }
+
+  @include responsive(T) {
+    .section-header {
+      margin-bottom: 32px;
+
+      h2 {
+        @include section-header-desktop;
+        margin-bottom: 8px;
+      }
+
+      p {
+        @include text-style(16);
+
+        br.break-m {
+          display: none;
+        }
+      }
+    }
+  }
+}
