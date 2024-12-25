@@ -1,0 +1,87 @@
+.card {
+  .carousel-wrapper {
+    position: relative;
+
+    .carousel-list {
+      display: flex;
+      gap: 0 20px;
+
+      .carousel-item {
+        // padding: 0px 20px;
+        width: calc(8.3333333333% - 20px) !important;
+        padding-right: 0 !important; // tiny-slider의 기본 padding 없앰
+
+        .content-wrapper {
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(43, 41, 41, 0.9);
+            opacity: 0;
+            transition: all 300ms ease-in-out;
+            box-sizing: border-box;
+          }
+
+          &:active::before,
+          &:hover::before {
+            border: 2px solid $white;
+            border-radius: 8px;
+            opacity: 1;
+            z-index: 10;
+          }
+
+          &:active,
+          &:hover {
+            p {
+              opacity: 1;
+              z-index: 20;
+            }
+          }
+
+          .image-box {
+            position: relative;
+
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+
+          p {
+            @include position-center;
+            color: $white;
+            opacity: 0;
+            transition: all 300ms ease-in-out;
+          }
+        }
+      }
+    }
+
+    .carousel-control-btn {
+      .prev i,
+      .next i {
+        font-size: 40px;
+        // color: $white;
+      }
+
+      .prev {
+        @include position-center-y;
+        transform: translateY(-50%);
+        left: 0;
+        z-index: 100;
+      }
+
+      .next {
+        @include position-center-y;
+        right: 0;
+        transform: translateY(-50%) rotate(180deg);
+        z-index: 100;
+      }
+    }
+  }
+}
