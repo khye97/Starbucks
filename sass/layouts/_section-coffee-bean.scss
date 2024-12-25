@@ -1,5 +1,5 @@
 .coffee-bean {
-  padding: 56px 0;
+  padding: $section-padding;
 
   .section-header {
     text-align: center;
@@ -17,6 +17,8 @@
 
   @include responsive(T) {
     .section-header {
+      margin-bottom: 32px;
+
       h2 {
         @include section-header-desktop;
         margin-bottom: 8px;
