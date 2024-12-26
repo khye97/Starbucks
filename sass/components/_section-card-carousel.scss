@@ -14,7 +14,7 @@
         .content-wrapper {
           position: relative;
 
-          &::before {
+          &::after {
             content: "";
             position: absolute;
             top: 0;
@@ -23,13 +23,18 @@
             height: 100%;
             background: rgba(43, 41, 41, 0.9);
             opacity: 0;
-            transition: all 300ms ease-in-out;
+            transition: opacity 300ms ease-in-out,
+              border-color 300ms ease-in-out;
             box-sizing: border-box;
+            pointer-events: none;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            z-index: 0;
           }
 
-          &:active::before,
-          &:hover::before {
-            border: 2px solid $white;
+          &:active::after,
+          &:hover::after {
+            border-color: $white;
             border-radius: 8px;
             opacity: 1;
             z-index: 10;
