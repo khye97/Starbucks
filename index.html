@@ -148,42 +148,34 @@
     <section id="card" class="card"></section>
     <!-- section card -->
 
+    <section id="best-menu" class="best-menu"></section>
+    <!-- section card -->
+
     <aside id="sidebar" class="sidebar"></aside>
 
     <div class="overlay" aria-hidden="true"></div>
 
     <script>
-      // function load(htmlFile, jsFile, id) {
-      //   fetch(htmlFile)
-      //     .then((response) => response.text())
-      //     .then((data) => {
-      //       let innerHtml = data;
-      //       const parent = document.getElementById(id);
-      //       parent.insertAdjacentHTML("beforeend", innerHtml);
-
-      //       // if (jsFile) {
-      //       //   jsFile.forEach((element) => {
-      //       //     var script = document.createElement("script");
-      //       //     script.src = element;
-      //       //     document.body.appendChild(script);
-      //       //   });
-      //       // }
-
-      //     });
-      // }
-
-      async function load(htmlFile, jsFile, id) {
+      // HTML 파일 로드 함수
+      async function loadHTML(htmlFile, id) {
         try {
-          const response = await fetch(htmlFile); // htmlFile의 fetch 요청을 기다림림
-          const data = await response.text(); // 요청 결과를 text로 파싱
+          const response = await fetch(htmlFile);
+          const data = await response.text();
           const parent = document.getElementById(id);
           parent.insertAdjacentHTML("beforeend", data);
+        } catch (error) {
+          console.error(`HTML 파일을 로드할 수 없음 ${htmlFile}:`, error);
+        }
+      }
 
-          if (jsFile) {
-            for (const element of jsFile) {
+      // JS 파일 로드 함수
+      async function loadScript(jsFiles) {
+        try {
+          if (jsFiles && jsFiles.length > 0) {
+            for (const src of jsFiles) {
               await new Promise((resolve, reject) => {
                 const script = document.createElement("script");
-                script.src = element;
+                script.src = src;
                 script.onload = resolve;
                 script.onerror = reject;
                 document.body.appendChild(script);
@@ -191,45 +183,30 @@
             }
           }
         } catch (error) {
-          console.error(`Error loading ${htmlFile}:`, error);
+          console.error(`스크립트 파일을 로드하지 못함`, error);
         }
       }
 
+      // 모든 HTML과 JS를 순차적으로 로드
       window.onload = async function () {
-        // load(
-        //   "./html/gnb.html",
-        //   ["./js/sidebar.js", "./js/sidebar-drawer.js"],
-        //   "gnb"
-        // ); // gnb
-        // load("./html/sidebar.html", null, "sidebar"); // sidebar
-        // load(
-        //   "./html/section-coffee-bean.html",
-        //   ["./js/carousels.js"],
-        //   "coffee-bean"
-        // ); // section coffee-bean
-        // load("./html/section-card.html", ["./js/carousel-card.js"], "card"); // section card
         try {
-          await load(
-            "./html/gnb.html",
-            ["./js/sidebar.js", "./js/sidebar-drawer.js"],
-            "gnb"
-          ); // gnb
-          await load("./html/sidebar.html", null, "sidebar"); // sidebar
-          await load(
-            "./html/section-coffee-bean.html",
-            ["./js/carousel-coffee-bean.js"],
-            "coffee-bean"
-          ); // section coffee-bean
-          await load(
-            "./html/section-card.html",
-            ["./js/carousel-card.js"],
-            "card"
-          ); // section card
+          // html load
+          await loadHTML("./html/gnb.html", "gnb");
+          await loadHTML("./html/sidebar.html", "sidebar");
+          await loadHTML("./html/section-coffee-bean.html", "coffee-bean");
+          await loadHTML("./html/section-card.html", "card");
+          await loadHTML("./html/section-best-menu.html", "best-menu");
+
+          // js load
+          await loadScript(["./js/sidebar.js", "./js/sidebar-drawer.js"]);
+          await loadScript(["./js/carousel-coffee-bean.js"]);
+          await loadScript(["./js/carousel-card.js"]);
+          await loadScript(["./js/best-menu-tab.js"]);
 
           // 모든 외부 HTML 로드가 완료된 후 IntersectionObserver 초기화
           initializeIntersectionObserver();
         } catch (error) {
-          console.error("외부 HTML 로드 중 오류 발생:", error);
+          console.error("외부 HTML 또는 JS 로드 중 오류 발생:", error);
         }
       };
     </script>
