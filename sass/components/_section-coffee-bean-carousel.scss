@@ -71,14 +71,14 @@
       .prev {
         @include position-center-y;
         left: 0;
-        z-index: 100;
+        z-index: $carousel-arrow-btn-level;
       }
 
       .next {
         @include position-center-y;
         right: 0;
         transform: translateY(-50%) rotate(180deg);
-        z-index: 100;
+        z-index: $carousel-arrow-btn-level;
       }
     }
   }
