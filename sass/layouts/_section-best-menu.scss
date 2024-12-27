@@ -59,6 +59,7 @@
             width: 100%;
             margin-bottom: 8px;
             border-radius: 8px;
+            box-shadow: $box-shadow;
           }
 
           p {
@@ -97,8 +98,8 @@
           padding: 0 20px;
           border-radius: 8px 8px 0 0;
           border: 2px solid $primary;
+          border-bottom: none;
           margin-right: -2px;
-          margin-bottom: -1px;
 
           &.is-active {
             background-color: $primary;
