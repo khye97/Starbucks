@@ -34,35 +34,3 @@
     background-color: $white;
   }
 }
-
-.btn-footer-desktop {
-  @extend %btn-base;
-  width: 140px;
-  height: 38px;
-
-  &:not(:disabled):hover {
-    color: $green;
-    border: 2px solid $green;
-  }
-}
-
-.btn-footer-mobile {
-  @extend %btn-base;
-  padding: 8px 12px;
-
-  &:not(:disabled):hover {
-    color: $green;
-    border: 2px solid $green;
-  }
-}
-
-.btn-footer-mobile-login {
-  @extend %btn-base;
-  width: 162px;
-  height: 38px;
-
-  &:not(:disabled):hover {
-    color: $green;
-    border: 2px solid $green;
-  }
-}
