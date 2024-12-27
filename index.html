@@ -154,6 +154,10 @@
 
     <section id="campaign" class="campaign"></section>
 
+    <section id="event" class="event"></section>
+
+    <section id="footer" class="footer"></section>
+
     <aside id="sidebar" class="sidebar"></aside>
 
     <div class="overlay" aria-hidden="true"></div>
@@ -200,12 +204,16 @@
           await loadHTML("./html/section-card.html", "card");
           await loadHTML("./html/section-best-menu.html", "best-menu");
           await loadHTML("./html/section-campaign.html", "campaign");
+          await loadHTML("./html/section-event.html", "event");
+          await loadHTML("./html/footer.html", "footer");
 
           // js load
           await loadScript(["./js/sidebar.js", "./js/sidebar-drawer.js"]);
           await loadScript(["./js/carousel-coffee-bean.js"]);
           await loadScript(["./js/carousel-card.js"]);
           await loadScript(["./js/best-menu-tab.js"]);
+          await loadScript(["./js/event-view-more.js"]);
+          await loadScript(["./js/footer.js"]);
 
           // 모든 외부 HTML 로드가 완료된 후 IntersectionObserver 초기화
           initializeIntersectionObserver();
