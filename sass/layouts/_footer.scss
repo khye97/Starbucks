@@ -1,0 +1,215 @@
+.footer {
+  background-color: $primary;
+  color: $white;
+  padding-bottom: 24px;
+
+  .footer-wrapper {
+    .footer-top {
+      margin-bottom: 24px;
+
+      .menu-wrapper {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 0 15px;
+
+        .menu-list {
+          .title {
+            @include flexbox(between);
+            @include text-style(14);
+            height: 50px;
+            // border-top: 1px solid $secondary;
+            border-bottom: 1px solid $secondary;
+            margin-left: -15px;
+            margin-right: -15px;
+            padding: 0 15px;
+
+            i {
+              font-size: 24px;
+            }
+          }
+          ul {
+            height: 0;
+            overflow-y: hidden;
+            transition: all 200ms ease-in-out;
+            border-bottom: 1px solid $secondary;
+            padding: 0 15px;
+            margin-left: -15px;
+            margin-right: -15px;
+
+            &.is-active {
+              padding: 15px 15px;
+            }
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            li {
+              @include flexbox(start);
+              // margin-bottom: 12px;
+              height: 28px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      @include text-style(12);
+      margin-bottom: 24px;
+
+      ul {
+        @include flexbox;
+        flex-wrap: wrap;
+
+        li {
+          margin-right: 16px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .mobile-button-group {
+      @include text-style(16);
+      @include flexbox;
+      gap: 0 16px;
+      margin-bottom: 24px;
+
+      button {
+        flex-grow: 1;
+        height: 38px;
+        color: $white;
+        border: 2px solid $white;
+        border-radius: 8px;
+        transition: all 300ms ease-in-out;
+
+        &:active,
+        &:hover {
+          color: $green;
+          border: 2px solid $green;
+        }
+      }
+    }
+
+    .button-group {
+      @include text-style(16);
+      @include flexbox;
+      gap: 0 16px;
+      margin-bottom: 24px;
+
+      button {
+        flex-grow: 1;
+        height: 38px;
+        color: $white;
+        border: 2px solid $white;
+        border-radius: 8px;
+        transition: all 300ms ease-in-out;
+
+        &:active,
+        &:hover {
+          color: $green;
+          border: 2px solid $green;
+        }
+      }
+    }
+
+    .copyright {
+      @include text-style(12);
+      color: $secondary;
+      text-align: center;
+    }
+  }
+
+  @include responsive(T) {
+    .footer-wrapper {
+      .footer-top {
+        .menu-wrapper {
+          margin-left: -41px;
+          margin-right: -41px;
+          padding: 0 40px;
+
+          .menu-list {
+            .title {
+              margin-left: -40px;
+              margin-right: -40px;
+              padding: 0 40px;
+            }
+
+            ul {
+              margin-left: -40px;
+              margin-right: -40px;
+              padding: 0px 40px;
+            }
+
+            ul.is-active {
+              padding: 15px 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(D) {
+    padding: 72px 0;
+
+    .footer-wrapper {
+      .footer-top {
+        @include flexbox(between);
+        margin-bottom: 100px;
+
+        .menu-wrapper {
+          @include flexbox(start, start);
+          border-bottom: none;
+          gap: 0 72px;
+
+          .menu-list {
+            .title {
+              height: auto;
+              border: none;
+              margin-bottom: 20px;
+
+              i {
+                display: none;
+              }
+            }
+            ul {
+              @include text-style(14);
+              padding: 0;
+              height: auto;
+              overflow-y: visible;
+              border: none;
+              padding: 0 40px;
+
+              li a:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-bottom {
+        ul li a:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .logo {
+        position: relative;
+        top: -40px;
+      }
+
+      .button-group {
+        button {
+          flex-grow: 0;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
